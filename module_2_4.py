@@ -6,10 +6,10 @@ for i in numbers:
         primes.append(i)
     for j in range(2, i):
         is_prime = i % j != 0
-        if j == i - 1:
-            primes.append(i)
         if is_prime == False:
             not_primes.append(i)
             break
+        elif is_prime == True and j == i - 1:
+            primes.append(i)
 print('Простые: ', primes)
 print('Составные: ', not_primes)
